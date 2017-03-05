@@ -1,0 +1,55 @@
+[ 2017-01-12T09:16:43+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:16:55+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:17:59+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:19:23+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:19:26+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:21:17+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:22:52+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:23:53+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T09:25:02+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: syntax error, unexpected '" target="' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+
+[ 2017-01-12T10:14:38+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/edit/id/7.html
+ERR: Think\Model:pro_edit方法不存在！
+
+[ 2017-01-12T10:25:24+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: syntax error, unexpected '$res' (T_VARIABLE)
+
+[ 2017-01-12T11:30:34+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/doedit.html
+ERR: syntax error, unexpected '"222"' (T_CONSTANT_ENCAPSED_STRING)
+
+[ 2017-01-12T19:08:27+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: syntax error, unexpected ';', expecting ',' or ')'
+
+[ 2017-01-12T19:40:55+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: syntax error, unexpected 'substr' (T_STRING)
+
+[ 2017-01-12T20:30:11+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: 1054:Unknown column 'Admins' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `tg_modules` WHERE ( moduleurl=Admins ) 
+
+[ 2017-01-12T21:22:07+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: Call to undefined function Admin\Controller\moduleControll()
+
+[ 2017-01-12T22:41:49+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/Index.html
+ERR: Think\Controller:moduleControll方法不存在！
+
+[ 2017-01-12T22:42:14+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Permission/Index.html
+ERR: Think\Controller:moduleControll方法不存在！
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评价卖家</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/home_index.css">
+	<script src="__PUBLIC__/js/jquery-2.1.3.min.js"></script>
+	<script src="__PUBLIC__/js/jquery.edslider.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+	<!-- 轮播图控制图标样式 -->
+	<load href="__PUBLIC__/css/bootstrap.min.css"/>
+	<load href="__PUBLIC__/js/bootstrap.min.js"/>
+	
+	<style>
+	.line{
+		width:100%;
+		height:2px;
+		background:#eee;
+	}
+	.main{
+		width:100%;
+		height:800px;
+	}
+	.container{
+		width:100%;
+		height:100%;
+	}
+	.r{
+		height:100%;
+	}
+	.g_line{
+		width:100%;
+		height:2px;
+	}
+	.col-md-6{
+	}
+
+	body,ul,li,a,img{
+			padding:0;
+			margin:0;
+		}
+		li{
+			list-style:none;
+		}
+		#star li{
+			float:left;
+		}
+		#star li a{
+			height:28px;
+			width:27px;
+			display:block;
+			/*border:1px solid red;*/
+			background:url(__PUBLIC__/Home_images/xing.gif) no-repeat;
+			/*background-position:0 -28px;*/
+			background-position:0 0px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 头部开始 -->
+	{:W('Cate/menu')}
+	<!-- 头部结束 -->
+	<div class="clear"></div>
+
+	<div class='line'></div>
+
+	<div class='main'>
+		<div class='container'>
+			
+			<div class="row r">
+			  <div class="col-md-2 r"></div>
+			  <div class="col-md-6 r">
+			  	<br>
+			  	<h4 style='font-weight:bold'>评价卖家</h4>
+				<div class='g_line'></div>
+				<br>
+				<form action = "{:U('Home/Evaluate/add_eva')}" method = 'post' enctype="multipart/form-data" class="form-horizontal">
+				  <div class="form-group">
+				    <label for="inputgoods" class="col-sm-4 control-label">您购买的商品 : </label>
+				    <div class="col-sm-8">
+				      <input type="text" name='goods' disabled class="form-control" id="inputgoods" value='{$list['goods']}'>
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="inputgoods" class="col-sm-4 control-label">该商品的卖家 : </label>
+				    <div class="col-sm-8">
+				      <input type="text" name='goods' disabled class="form-control" id="inputgoods" value='{$username}'>
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="inputgoods" class="col-sm-4 control-label">该商品的图片 : </label>
+				    <div class="col-sm-8">
+				      <img src="__PUBLIC__/Uploads/{$list['picname']}" width='100px' height='100px' alt="">
+				    </div>
+				  </div>
+					<input type="hidden" name='score' id='eva' value=''>
+					<input type="hidden" name='orderid' value='{$orderid}'>
+					<input type="hidden" name='userid' value='{$list['userid']}'>
+					<input type="hidden" name='username' value='{$username}'>
+				  <div class="form-group">
+				    <label for="inputgoods" class="col-sm-4 control-label">您对该卖家的评价 : </label>
+				    <div class="col-sm-8">
+				     	<ul id="star">
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul>
+				    </div>
+				  </div>
+
+				<br>				
+				<br>				
+				<br>				
+				  
+				  <div class="form-group">
+				  <div class='col-sm-6'></div>
+				    <div class="col-sm-6">
+				      <button type="submit" class="btn btn-default">&nbsp;完成评价&nbsp;</button>
+				    </div>
+				  </div>
+				</form>
+
+			  </div>
+			  <div class="col-md-4 r"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="clear"></div>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部文件加载开始 -->
+	{:W('Cate/foot')}
+
+</body>
+<script>
+		// 找对象
+	var star = document.getElementById('star');
+	// 找到儿子们
+	var star_son = star.children;
+	// 儿子的数量
+	var len = star_son.length;
+	// 循环绑定事件
+	for(var i = 0; i < len; i++){
+		// 记录自己的索引
+		star_son[i].sign = i;
+		star_son[i].onmouseover = function(){
+			// 自己的索引
+			// alert(this.sign);
+			// 移动进来就清空所有高亮
+			for(var i = 0; i < len; i++){
+				// 别找错对象
+				star_son[i].firstChild.style.backgroundPosition = '0px 0px';
+			}
+
+			// 从0开始到当前索引，设置高亮
+			for(var i = 0; i <= this.sign; i++){
+				star_son[i].firstChild.style.backgroundPosition = '0px -28px';
+			}
+
+			$('#eva').attr('value',this.sign+1);
+			
+		};
+	}
+</script>
+</html>

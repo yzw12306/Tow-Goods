@@ -1,0 +1,272 @@
+.content{
+    width:1080px;
+    margin:0 auto;
+    padding-left:24px;
+    padding-top:15px;
+    padding-bottom:30px;
+}
+
+.flowstep{
+	position: relative;
+	width: 850px;
+	margin: 0 auto;
+}
+
+.detail_stepbar{
+	margin-left: -30px;
+	width: 1050px;
+	margin: 12px auto 0;
+	overflow: hidden;
+	list-style: none;
+}
+
+.detail_stepbar li{
+	float: left;
+	text-align: center;
+	width: 210px;
+}
+
+.step_name{
+	padding: 3px 0;
+    font-weight: 700;
+    color: #888;
+}
+
+.flowstep .detail_stepbar .step_first .step_done .step_no{
+	background-position: 50% -204px;
+}
+
+.flowstep .detail_stepbar .step_done .step_no {
+	background-position: 50% -170px;
+}
+
+.flowstep .detail_stepbar .step_last .step_cur .step_no{
+	background-position: 50% -68px;
+}
+.flowstep .detail_stepbar .step_last .step_curi .step_no{
+    background-position: 50% 0px;
+}
+.flowstep .detail_stepbar .step_last .step_cura .step_no{
+    background-position: 50% -136px;
+}
+
+.step_no{
+	height:34px;
+	line-height: 34px;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'arial black';
+    background: url(../Home_images/orderstep.png) no-repeat 50% -102px;
+	/* background-position: 50% -204px; */
+}
+
+.step_off{
+    height:34px;
+    line-height: 34px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'arial black';
+    background: url(../Home_images/orderstep.png) no-repeat 50% -102px;
+     background-position: 50% -204px; 
+}
+
+
+/*======================购买的商品信息========================*/
+
+.shoppinglist{
+	margin-top:30px;
+}
+
+.cart_th{
+    height:50px;
+    background-color:#E3EEFF;
+}
+
+.th{
+    height:40px;
+    padding:5px;
+}
+
+.th_info{
+    width:480px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-right:1px dashed #ccc;
+    float:left;
+}
+
+.th_price{
+    width:150px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-right:1px dashed #ccc;
+    float:left;
+}
+
+.th_num{
+    width:130px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-right:1px dashed #ccc;
+    float:left;
+}
+
+
+.th_count{
+    width:150px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-right:1px dashed #ccc;
+    float:left;
+}
+
+.th_set{
+    width:150px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    float:left;
+}
+
+
+.pr_item{
+    width:100%;
+    height:100px;
+    background-color:#fbfcff;
+    line-height:100px;
+    margin:0 auto;
+    border-bottom:1px dashed #80b2ff;
+    /* border-top:2px solid #fff; */
+}
+
+.pr_info{
+    height:80px;
+    width:475px;
+    padding-left:10px;
+    float:left;
+}
+
+.pr_img{
+    height:80px;
+    width:80px;
+    padding-top:10px;
+    float:left;
+}
+
+.pr_info span{
+    float:left;
+    height:80px;
+    text-align:center;
+    margin-left:20px;
+}
+
+.pr_pri{
+    width:150px;
+    height:80px;
+    float:left;
+    text-align:center;
+}
+
+.pr_number{
+    width:130px;
+    height:80px;
+    float:left;
+    text-align:center;
+}
+
+.count_pri{
+    width:150px;
+    height:80px;
+    float:left;
+    text-align:center;
+    font-weight:700;
+    color:red;
+}
+
+.status{
+    width:160px;
+    height:80px;
+    float:left;
+    text-align:center;
+}
+
+.footer_info{
+	width:100%;
+	height:200px;
+	border:1px solid #eee;
+	margin-top:20px;
+	margin-bottom:60px;
+}
+
+.m_info{
+	width:700px;
+	background-color:#fbfbfb;
+	height:100%;
+	float:left;
+	border-right:1px solid #eee;
+}
+
+.info_heeder{
+	width:100%;
+	height:30px;
+	background-color:#f3f3f3;
+	border-bottom:1px solid #eee;
+}
+
+.left_main{
+	padding-left:30px;
+	width:60%;
+	height:170px;
+	border-right:1px dashed #eee;
+	float:left;
+}
+
+.left_main span{
+	height:20px;
+	padding:10px;	
+	margin-top:10px;
+	display:block;
+	font-size:14px;
+}
+
+.right_main{
+	float:left;
+}
+
+.right_main span{
+	margin-top:60px;
+	display:block;
+	float:left;
+}
+
+.count_all{
+	float:right;
+	width:265px;
+	text-align:center;
+	height:200px;
+	line-height:300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

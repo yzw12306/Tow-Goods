@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<load href="__PUBLIC__/js/jquery-2.1.3.min.js"/>	
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">	
+</head>
+<body>
+	<table class="table table-striped">
+		<tr>
+			<th>订单号</th>
+			<th>卖家账号</th>
+			<th>买家账号</th>
+			<th>商品ID</th>
+			<th>商品名称</th>
+			<th>收件人</th>
+			<th>地址</th>
+			<th>电话</th>
+			<th>总金额</th>
+			<th>状态</th>
+			<th>添加时间</th>
+			<th>操作</th>
+		</tr>
+		<foreach name="list" item="val">
+			<tr>
+				<td>{$val['id']}</td>
+				<td>{$val['saleid']}</td>
+				<td>{$val['buyid']}</td>
+				<td>{$val['productid']}</td>
+				<td>{$val['productname']}</td>
+				<td>{$val['linkman']}</td>
+				<td>{$val['address']}</td>
+				<td>{$val['phone']}</td>
+				<td>{$val['total']}</td>
+				<td>{$val['status']}</td>
+				<td>{$val['addtime']}</td>
+				<td><a class="btn btn-danger btn-xs {$val['disabled']}" href="{:U('Admin/Orders/status',['id' => $val['id']])}">失效</a></td>
+			</tr>
+		</foreach>
+	</table>
+	<div class="btnBox">{$show}</div>
+</body>
+<script>
+	$('.btnBox').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+	// 给当前页码高亮显示
+	$('.btnBox span').parent().addClass('active');
+</script>
+</html>

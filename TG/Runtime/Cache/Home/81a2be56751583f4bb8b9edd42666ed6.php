@@ -1,0 +1,138 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|找回密码</title>
+        <script type="text/javascript" src="/project/TG/Public/js/jquery.js"></script>
+        <script type="text/javascript" src="/project/TG/Public/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/project/TG/Public/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/project/TG/Public/css/login.css">
+        <link type="text/css" rel="stylesheet" href="/project/TG/Public/css/header_nav_footer.css">        
+        <link rel="shortcut icon" type="image/x-icon" href="/project/TG/Public/Home_images/icon.png">
+        <style>
+        body{
+            background:#eee;
+        }
+        .header_login{
+            width:100%;
+            height:100px;
+            background:#fff;
+        }
+        .line{
+            width:100%;
+            height:2px;
+            background:#eee;
+        }
+        .img_login{
+            margin-top:-20px;
+        }
+        .find_body{
+            width:100%;
+            height:500px;
+            background:#fff;
+        }
+        .container{
+            background:#eee;
+        }
+        .dept{
+            margin:40px;
+        }
+        .p1{
+            margin-left:40px;
+            font-size:14px;
+            font-weight:bold;
+        }
+        .ipt{
+            margin-left:40px;
+            margin-top:20px;
+            line-height:25px;
+        }
+       
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+        <div class="header_login">
+            <div class="img_login"><a href="<?php echo U('Home/index/index');?>"><img src="/project/TG/Public/Home_images/logo.png"></a></div>
+            <div class="clear"></div>
+        </div>
+        <div class='line'></div>
+        <div class="box">
+            <div class="find_body ">
+            <div class='line'></div>
+                <div class='dept'><img src="/project/TG/Public/Home_images/mima_2.jpg" width='400px' alt=""></div>
+            <?php if($id == 0): ?><div class='p1'><span style='font-size:18px;'>╮(╯﹏╰)╭该链接已失效..</span></div>
+            <?php else: ?>
+
+                <div class='p1'><p>已通过验证,请重置您的密码:</p></div>
+                <form action="<?php echo U('Home/Find/do_reset');?>" method='post'>
+                <input type="hidden" name='id' value='<?php echo ($id); ?>'>
+                <div class='ipt'><input type="password" name='pass' size='40' placeholder='  请输入新密码'></div>
+                <div class='ipt'><input type="password" name='passrepeat' size='40' placeholder='  请再次输入密码'></div>
+               
+                <div class="ipt"><input type="text" name='vcode' size='15' placeholder='  请输入验证码'>&nbsp;<img src="<?php echo U('Home/Find/code');?>" width='150px' height='35px' onclick="this.src='<?php echo U('Home/Find/code');?>?'+new Date().getTime();" alt=""></div>
+                <div class='ipt'><input type="submit" value=' 完成 '></div>
+                </form><?php endif; ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="login_footer">
+            <div class="footer_nav">
+                <ul>
+                    <li><a href="#">关于魅族</a></li>
+                    <li><a href="#">工作机会</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">法律声明</a></li>
+                    <li style="border:0px;"><a href="#">常见问题</a></li>
+                </ul>                
+            </div>
+            <div class="connect">
+                <ul>
+                    <li>客服热线</li>
+                    <li>400-788-3333</li>
+                    <li><a href="#">在线客服</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="info">
+                <span>©2016 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;备案号: 粤ICP备13003602号-4&nbsp;&nbsp;&nbsp;&nbsp;经营许可证编号: 粤B2-20130198</span>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script>
+
+        $('input:eq(0)').blur(function(){
+
+            var str = $(this).val();
+
+            if(str.length >= 6 &&str.length <= 12){
+
+                $('#passtips').html('');
+
+            }else if(str.length == 0){
+
+                 $('#passtips').html('*密码不能为空&nbsp&nbsp&nbsp&nbsp');
+
+            }else{
+
+                 $('#passtips').html('*密码为6-12字符');
+
+            }
+        });
+
+         $('input:eq(1)').blur(function(){
+            
+            if($(this).val() !== $('input:eq(0)').val()){
+
+                 $('#repeattips').html('*两次输入的密码不一致');
+
+            }else{
+
+                $('#repeattips').html('');
+
+            }
+        });
+    </script>
+</html>

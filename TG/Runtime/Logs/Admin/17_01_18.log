@@ -1,0 +1,80 @@
+[ 2017-01-18T23:14:51+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Login/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_admins` [ RunTime:0.2280s ]
+SQL: SELECT * FROM `tg_admins` WHERE `adminname` = 'xiaoyang'  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:15:16+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/role.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:15:54+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Login/check.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_admins` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tg_admins` WHERE `adminname` = 'yzw'  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:16:12+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/role.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:16:21+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/role.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:16:24+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/role.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tg_permission`  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:16:35+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/role.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tg_permission`  [ RunTime:0.0010s ]
+
+[ 2017-01-18T23:16:52+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/lookAdmin.html?id=1&root=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_permission` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_modules` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `tg_modules` WHERE ( moduleurl='Admins' )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tg_permission` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tg_modules`  [ RunTime:0.0020s ]
+

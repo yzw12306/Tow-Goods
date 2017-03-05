@@ -1,0 +1,546 @@
+.search{
+	height: 60px;
+	width: 100%;
+	background-color: #88c63c;
+}
+
+.search_main{
+	width: 1080px;
+	height: 60px;
+	margin: 0 auto;
+	color: #fff;
+	font:14px/1.5 "微软雅黑";
+}
+
+
+/*==============全部商品分类===============*/
+.search_menu{
+	width: 225px;
+	height: 60px;
+	background-color: #4a9000;
+	float: left;
+}
+
+.search_menu a{
+	display: block;
+	width: 225px;
+	height: 60px;
+	color: #fff;
+	font:20px/1.5 "微软雅黑"; 
+	text-align: center;
+	line-height: 60px;
+}
+
+.search_menu a:hover{
+	background-color: #509c00;
+}
+
+
+/*===================搜索框===================*/
+
+#search_box{
+	width: 508px;
+	margin-top: 5px;
+	margin-left: 28px;
+	float: left;	
+	position: relative;
+}
+
+#search_box input{
+	width: 450px;
+	height: 36px;
+    padding: 0 10px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    font-size: 13px;
+}
+
+.search_button{
+	display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: #333;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+}
+
+
+/*=========================================网站内容模块========================================*/
+
+.content{
+	width: 1080px;
+	margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+/*=================菜单栏、轮播图、公告栏==================*/
+
+
+/*==========菜单栏==========*/
+.item{
+	width: 225px;
+	float: left;
+}
+
+.item_menu li{
+	height: 40px;
+	width: 225px;
+	padding-left:15px;
+	border-bottom: 1px dotted #f7f7f7; 
+	line-height: 40px;
+	/*white-space: nowrap;
+	text-overflow: ellipsis;*/
+}
+
+.item_menu li:hover{
+	display: block;
+	background-color: #fcfcfc;
+}
+
+.item_menu li a{
+	padding-right: 10px;
+}
+
+/*===========轮播图===========*/
+
+.index_slider{
+	width: 553px;
+	height: 290px;
+	border: 3px solid #6cbb18;
+	float: left;
+	border-radius: 20px;
+	margin-top: -12px;
+	margin-left: 5px;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+
+/*==============发布框、公告栏==============*/
+
+.left_main{
+	width: 290px;
+	float: left;
+	height: 260px;
+}
+
+
+/*============发布框============*/
+.pub_btn{
+	background-color: #f4f4f4;
+	height: 120px;
+}
+
+.pub{
+	width: 140px;
+	height: 120px;
+    float: left;
+	text-align: center;
+}
+
+.pub a{
+	display: block;
+    padding: 22px 0;
+    border: 1px solid #efefef;
+    margin-left: 8px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    color: #64ccee;
+}
+
+.main_title{
+	display: inline-block;
+    padding-right: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    background: url(../img/btn.png) no-repeat 85px -99px;
+}
+
+.subtitle{
+	display: block;
+    color: #999;
+}
+
+/*========公告========*/
+
+.notice{
+    width: 292px;
+    height: 144px;
+    background: url(../img/bg.png) no-repeat;
+    background-position: bottom;
+}
+
+.notice p{
+	width: 260px;
+    height: 109px;
+   	padding-left: 19px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+
+
+/*============你可能喜欢================*/
+
+.what_you_like{
+	height: 250px;
+	margin-top: 50px;
+}
+.you_may_like{
+	width: 240px;
+}
+
+.col {
+    float: left;
+    display: inline;
+    zoom: 1;
+}
+
+.avatar {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ebebeb;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.avatar img{
+	position: absolute;
+	top: -15px;
+	left: 3px;
+	width:60px;
+}
+
+.foreword {
+    width: 159px;
+    font-size: 14px;
+    float: left;
+    margin-left: 8px;
+}
+
+.tag-cloud {
+    width: 240px;
+    float: left;
+    margin-top: -25px;
+    white-space: nowrap;
+    height: 164px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.login {
+    color: #509c00;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.tag-cloud a {
+    background: 0 0;
+    background-color: #f7f7f7;
+    border: 0;
+    width: 50px;
+    height: 9px;
+    float: left;
+    margin: 0 14px 15px 0;
+    padding: 6px 7px;
+    line-height: 12px;
+    color: #888;
+}
+
+.placeholder {
+    background: 0 0;
+    border: 0;
+    width: 50px;
+    height: 9px;
+    float: left;
+    margin: 0 14px 15px 0;
+    padding: 6px 7px;
+    line-height: 12px;
+    color: #888;
+}
+
+
+/*===============猜你喜欢==================*/
+
+.new-items {
+    width: 830px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.new-items .item-type li{
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    padding: 0 13px;
+    margin-right: 5px;
+}
+
+.new-items .item-type li.selected {
+    margin-bottom: -1px;
+    color: #88c63c;
+    border-bottom: 3px solid #88c63c;
+    width: 64px;
+}
+
+.new-items .bd {
+    height: 180px;
+    padding: 12px 0 8px 5px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.new-items .item-list {
+    float: left;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.J_ItemPic{
+    width:160px;
+}
+
+.new-items .reload, .new-items .more {
+    position: absolute;
+    right: 0;
+    top: -38px;
+    color: #84878c;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.new-items .item-list ul {
+    height: 156px;
+    width: 810px;
+}
+
+.new-items .item-list li {
+    margin-right: 5px;
+    width: 156px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-items .item-pic,.new-items .item-pic a {
+    height: 156px;
+    width: 156px;
+}
+
+.new-items .item-pic {
+    position: relative;
+}
+
+.sh-pic{
+	display: table;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.new-items .item-list .title {
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*=====================商品列表分类=========================*/
+
+/*==============闲置数码==============*/
+
+.goods_item{
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+
+.goods_item .item_digital{
+    width: 1080px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.item_digital span{
+    display: block;
+    width: 118px;
+    border-bottom: 3px solid #bd8cc7;
+    text-align: center;
+}
+
+.item_digital span a{
+    font-size: 18px;
+    /*font-weight: 700;*/
+    color: #bd8cc7;
+}
+
+.item_digital_list{
+    width: 1080px;
+    height: 290px;
+    border-top: 1px solid #bd8cc7;
+    padding: 5 0;
+}
+
+.goods_a{
+    width: 228px;
+    height: 290px;
+    float: left;
+    /*overflow: hidden;*/
+}
+
+.goods_b{
+    border-left: 1px dotted #b7b7b7;
+    width: 280px;
+    height: 290px;
+    float: left;
+    overflow: hidden;
+}
+
+.digital_img{
+    width: 208px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.digital_img img{
+    width: 208px;
+}
+
+.goods_title{
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.goods_c{
+    height: 145px;
+    border-bottom: 2px dotted #b7b7b7;
+}
+
+.goods_c_img{
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    float: left;
+}
+
+.goods_c_img img{
+    width: 125px;
+}
+
+.goods_c_title{
+    margin-top: 20px;
+    width: 118px;
+    float: left;
+    height: 100px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: end;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+}
+
+.price-block {
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.price {
+    line-height: 14px;
+    text-align: right;
+    padding-right: 10px;
+}
+.price-block .price em {
+    font-weight: 700;
+    font-size: 14px;
+    color: #f40;
+}
+/*.item_digital_list div{
+    border-left: 1px dotted #b7b7b7;
+    width: 255px;
+    height: 260px;
+    float: left;
+}*/
+
+.item_books{
+    margin-top: 40px;
+}
+
+.item_books span{
+    display: block;
+    width: 118px;
+    /*float: right;*/
+    border-bottom: 3px solid #64ccee;
+    text-align: center;
+}
+
+.item_books_list{
+    width: 1080px;
+    height: 290px;
+    border-top: 1px solid #64ccee;
+    padding: 5 0;
+}
+
+.item_books span a{
+    font-size: 18px;
+    /*font-weight: 700;*/
+    color: #64ccee;
+}
+
+.item_sp{
+    margin-top: 40px;
+}
+
+.item_sp span{
+    display: block;
+    width: 118px;
+    /*float: right;*/
+    border-bottom: 3px solid #ff9170;
+    text-align: center;
+}
+
+.item_sp_list{
+    width: 1080px;
+    height: 290px;
+    border-top: 1px solid #ff9170;
+    padding: 5 0;
+}
+
+.item_sp span a{
+    font-size: 18px;
+    /*font-weight: 700;*/
+    color: #ff9170;
+}
+
+
+
+

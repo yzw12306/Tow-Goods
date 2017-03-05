@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<load href="__PUBLIC__/js/jquery-2.1.3.min.js"/>
+	<load href="__PUBLIC__/css/bootstrap.min.css" />
+	<load href="__PUBLIC__/js/bootstrap.min.js"/>
+</head>
+<body>
+
+	<table class="table table-striped">
+		<tr>
+			<th>商品id</th>
+			<th>图片</th>
+			<th>商品名称</th>
+			<th>商品分类</th>
+			<th>用户名</th>
+			<th>生产厂家</th>
+			<th>原价</th>
+			<th>单价</th>
+			<th>成色</th>
+			<th>商品状态</th>
+			<th>送货方式</th>
+			<th>添加时间</th>
+			<th>查看留言</th>
+		</tr>
+
+		<foreach name="list" item="val">
+			<tr>
+				<td>{$val['id']}</td>
+				<td><img src="__PUBLIC__/Uploads/{$val['picname']}" width='60px' height='60px'/></td>
+				<td>{$val['goods']}</td>
+				<td>{$val['typeid']}</td>
+				<td>{$val['userid']}</td>
+				<td>{$val['company']}</td>
+				<td>{$val['initprice']}</td>
+				<td>{$val['price']}</td>
+				<td>{$val['fineness']}</td>
+				<td>
+				<a href="{:U('Admin/Products/index',['id' => $val['id'] , 'status' => '2' ])}" class="btn btn-info btn-xs {$val['status']=='启用'?'disabled':''}" role="button">启用</a>
+				<a href="{:U('Admin/Products/index',['id' => $val['id'] , 'status' => '3' ])}" class="btn btn-info btn-xs " {$val['status']=='失效'?'disabled':''} role="button">失效</a>
+				</td>
+
+				<td>{$val['deliver']}</td>
+				<td>{$val['addtime']}</td>
+				<td><a href="{:U('Admin/Messages/find',['id' => $val['id']])}" class='btn btn-default' role="button">查看留言</a></td>
+				
+			</tr>
+		</foreach>
+	</table>
+	<div class="btnBox">{$show}</div>
+</body>
+<script>
+	$('.btnBox').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+	// 给当前页码高亮显示
+	$('.btnBox span').parent().addClass('active');
+
+	// 确认删除弹窗
+	function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+
+</script>
+
+</html>

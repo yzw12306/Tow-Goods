@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|修改个人信息</title>
+        <link type="text/css" href="__PUBLIC__/css/edit.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <load href='__PUBLIC__/css/bootstrap.min.css' />
+        <load href='__PUBLIC__/js/bootstrap.min.js' />
+        <load href='__PUBLIC__/js/jquery.js' />        
+		<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+    </head>
+    <body>
+		<!--头部公共栏-->
+	
+        {:W('Cate/menu')}
+
+		<!--内容-->
+        <div class="edit_main">
+		
+			<!--导航-->
+           
+            <div class="clear"></div>
+			<hr style="background-color:#E5E5E5; height:1px; border:0px;">
+			
+            <!--内容信息编辑-->
+            <form action="{:U('Home/Person/do_edit')}" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="email" value="{$users['email']}">
+				<input type="hidden" name="id" value="{$users['id']}">
+				<input type="hidden" name="oldpicname" value="{$users['picture']}">
+                <div class="headerpic_username">
+					<div class="headerpic_img">
+                         <img src="__PUBLIC__/Uploads/Head_pic/{$users['picture']?$users['picture'] : $default}" width="100" style="border:5px solid #fff;" alt="">
+                    </div>
+					<div class="username_name">
+						<input type="text" name="realname" value="{$users['realname']}" placeholder="请输入你的姓名" style="border:0px; color:#515151; font-size:18px; background:url(__PUBLIC__/Home_images/elements.png) no-repeat 130px 7px; width:150px; height:30px;">
+						<p style="color:#7f7f7f; margin-top:20px;"><span>账号：{$users['username']}</span><input type="text" name="username" value="{$users['username']}" readonly style="border:0px; font-size:14px;"></p>
+					</div>
+					<div class="clear"></div>
+					
+                </div>
+				<p style="color:#515151;font-size:18px;margin-top:50px;padding-left:17px;margin-bottom:30px;">个人信息修改</p>
+				<hr style="background-color:#E5E5E5; height:1px; border:0px;width:865px;">
+				<div class="edit_headerpic">
+					<span style="margin-right:90px;">头像</span><input type="file" name="headerpic" style="border:0px;width:150px; height:30px;">
+				</div>
+				<div class="edit_headerpic">
+					<span style="margin-right:90px;">性别</span>
+					<input type="radio" name="sex" value="1" {$users['sex'] == 1 ? 'checked' : ''}>男
+                    &nbsp;
+                    &nbsp;
+					<input type="radio" name="sex" value="0" {$users['sex'] == 0 ? 'checked' : ''}>女
+				</div>
+				<div class="edit_headerpic">
+					<span style="margin-right:90px;">地址</span>
+					<input type="text" name="address" value="{$users['address']}" style="border:0px; font-size:16px; font-weight:bold;background:url(__PUBLIC__/Home_images/elements.png) no-repeat 130px 7px; width:150px; height:30px;">
+				</div>
+				<div class="edit_headerpic">
+					<span style="margin-right:90px;">电话</span><input type="text" name="phone" value="{$users['phone']}" style="border:0px; font-size:16px; font-weight:bold;background:url(__PUBLIC__/Home_images/elements.png) no-repeat 130px 7px; width:150px; height:30px;">
+				</div>
+				
+				<div class="edit_headerpic">
+					<span style="margin-right:90px;">生日</span><input type="text" name="birth" value="{$users['birth']}" style="border:0px; font-size:16px; font-weight:bold;background:url(__PUBLIC__/Home_images/elements.png) no-repeat 130px 7px; width:150px; height:30px;">
+				</div>
+
+				<div class="edit_headerpic">
+					<input type="submit" value="修改" style="border:0; width:150px; height:30px; background-color:#00a7ea;color:#fff;">
+				</div>
+				
+            </form>
+            
+            
+        </div>
+        
+		<!--底部公共栏-->
+	
+		<hr style="background-color:#E5E5E5; height:1px; border:0px;">
+		
+       {:W('Cate/foot')}
+    </body>
+</html>

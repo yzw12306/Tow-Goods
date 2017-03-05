@@ -1,0 +1,27 @@
+[ 2017-01-11T00:05:01+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: 模板不存在:./Apps/Admin/View/Index/verify.html
+
+[ 2017-01-11T00:05:30+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: 模板不存在:./Apps/Admin/View/Index/verify.html
+
+[ 2017-01-11T00:05:31+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: 模板不存在:./Apps/Admin/View/Index/verify.html
+
+[ 2017-01-11T10:23:43+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Index/dologin.html
+ERR: syntax error, unexpected ')', expecting ']'
+
+[ 2017-01-11T10:55:38+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/dologin.html
+ERR: syntax error, unexpected 'new' (T_NEW)
+
+[ 2017-01-11T10:55:56+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/dologin.html
+ERR: syntax error, unexpected ';'
+
+[ 2017-01-11T11:40:40+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/index
+ERR: Call to undefined function Admin\Controller\index()
+
+[ 2017-01-11T19:06:31+08:00 ] ::1 /SecondProject/TG/index.php/Admin/index/login.html
+ERR: 模板不存在:./Apps/Admin/View/Index/login.html
+
+[ 2017-01-11T19:33:17+08:00 ] ::1 /SecondProject/TG/index.php/Admin/admins
+ERR: syntax error, unexpected '}'
+

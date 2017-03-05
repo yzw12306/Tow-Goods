@@ -1,0 +1,427 @@
+.content{
+    width:1080px;
+    margin:0 auto;
+    padding-left:24px;
+    padding-top:15px;
+    padding-bottom:30px;
+}
+
+.left_main{
+    width:150px;
+    height:500px;
+    background-color:#fafafc;
+    float:left;
+    margin-top:20px;
+}
+
+.list{
+    margin-left:20px;
+}
+.list li{
+    margin:15px;
+    font-size:14px;
+}
+.right_main{
+    float:left;
+    margin-top:35px;
+    margin-left:20px;
+}
+
+.info{
+    
+    height:199px;
+    width:845px;
+    border-top:1px solid #f6f6f6;
+    border-bottom:1px solid #f6f6f6;
+    border-left:1px solid #f6f6f6;
+    background:url(../Home_images/index-bg.png) no-repeat 585px 0;
+    
+}
+
+.info_left{
+    width:640px;
+    float:left;
+}
+
+
+.info_right{
+    width:205px;    
+    float:left;
+}
+
+.info_img{
+    margin:25px;
+    width:110px;
+    padding:10px;
+    background-color:#fafafc;
+    float:left;
+}
+
+.welcome{
+    float:left;
+    margin-top:35px;
+}
+
+.p_info{
+    float:left;
+    margin-left:95px;
+    margin-top:35px;
+}
+
+.p_info p{
+    margin-bottom:15px;
+    color:#a7a7a7;
+}
+
+.p_info p span{
+    color:#444;
+}
+
+.info_right{    
+    margin-top:35px;
+}
+
+.info_box{
+    margin-top:20px;
+}
+
+.info_order{    
+    float:left;
+    width:490px;
+    height:275px;
+    border:1px solid #fafafc;
+}
+
+.info_ordr_header{
+    height:35px;
+    background-color:#fafafc;
+    line-height:35px;
+    padding:0 15px;
+}
+
+.info_activity{
+    margin-left:20px;
+    float:left;
+    width:336px;
+    height:275px;
+    border:1px solid #fafafc;
+}
+
+.info_activity_header{
+    height:35px;
+    background-color:#fafafc;
+    line-height:35px;
+    padding:0 15px;
+}
+
+.info_order_pay{
+    height:76px;
+    margin-left:65px;
+    margin-top:35px;
+}
+
+.wait_pay_img{
+    float:left; 
+}
+
+.wait_pay{
+    float:left;
+    margin-top:15px;
+    margin-left:30px;
+}
+
+.notice{
+	font-size:14px;
+	padding:20px;
+	line-height:30px;
+}
+
+/*====================地址管理样式==========================*/
+
+
+.add_address{
+    color:#515151;
+    font-size:14px;
+}
+
+.add_title{
+    font-size:18px;
+    font-weight:700;
+}
+
+.uname{
+    /* width:500px; */
+    margin-top:10px;
+    float:left;
+}
+
+.uname input{
+    display: inline-block;
+    margin-right: 30px;
+    width: 350px;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    outline: 0;
+}
+
+.phone{
+    /* width:400px; */
+    margin-top:10px;
+    float:left;
+}
+
+.phone input{
+    display: inline-block;
+    width: 345px;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    outline: 0;
+}
+
+.address{
+    margin-top:10px;
+}
+
+.address input{
+    display: inline-block;
+    width: 815px;
+    padding: 0 10px;
+    line-height: 35px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    outline: 0;
+}
+
+.add_button{
+    height:36px;
+    width:100px;
+    background-color:#00c3f5;
+    border:0px;
+    float:right;
+    margin-top:10px;
+    margin-right:50px;
+    color:#fff;
+}
+
+.add_button:hover{
+    background-color:#4dcff6;
+}
+
+/*====================已有地址=======================*/
+
+.show_address{
+    margin-top:30px;
+    color:#515151;
+    font-size:14px;
+}
+
+.have_address{
+    font-size:18px;
+    font-weight:700;
+}
+
+.address_show{
+    margin-top:10px;
+    height:35px;
+    line-height:35px;
+    background-color:#eee;
+}
+
+.address_show span{
+    float:left;
+}
+
+.have_name{
+    width:150px;
+    text-align:left;
+    display:block;
+    padding-left:10px;
+}
+
+.have_addr{
+    width:350px;
+    text-align:left;
+    display:block;
+}
+
+.have_phone{
+    width:150px;
+    text-align:center;
+    display:block;
+}
+
+.do_address{
+    text-align:center;
+    width:200px;
+    display:block;
+}
+
+.user_addr{
+    border:1px solid #eee;
+    margin-top:10px;
+    height:40px;
+    line-height:40px;
+}
+
+.user_addr span{
+    float:left;
+}
+
+
+
+/*========================我的订单======================*/
+
+.myorders_header{
+    width:905px;
+    height:40px;
+    border-bottom:1px solid #eee;
+    margin:0 auto;
+    color: #545454;
+    font-size:18px;
+    font-weight:700;
+    line-height:40px;
+    padding-bottom:2px;
+}
+
+.selected{
+	border-bottom:2px solid #00c3f5;
+    color:#00c3f5;
+}
+
+.myorders_all{
+    float:left;
+    width:100px;
+    height:30x;
+    margin-left:30px;    
+    text-align:center;
+}
+
+.myorders_sent{
+    float:left;
+    width:100px;
+    text-align:center;
+}
+
+.myorders_hold{
+    float:left;
+    width:100px;
+    text-align:center;
+}
+
+.myorders_item{
+    margin-top:20px;
+}
+
+.myorders_item_menu{
+	height:40px;
+	border:1px solid #efefef;
+    background-color:#fafafc;
+	margin-bottom:10px;
+	line-height:40px;
+}
+
+.myorders_item_header{
+    width:903px;
+    height:40px;
+    background-color:#fafafc;
+    line-height:40px;
+    font-size:14px;
+    border:1px solid #efefef;
+}
+
+.addtime{
+    float:left;
+    margin-left:30px;
+    color:#bdbdbd;
+}
+
+.myorders_num{
+    float:left;
+    margin-left:30px;
+    color:#bdbdbd;
+}
+
+.myorders_item_info{
+    height:100px;
+    border-left:1px solid #eee;
+    border-right:1px solid #eee;
+    border-bottom:1px solid #eee;
+    line-height:50px;
+}
+
+.myorders_item_name{
+    float:left;
+    width:130px;
+    height: 100px;
+    text-align:center;
+	border-right:1px dashed #eee;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.myorders_item_img{
+    float:left;
+    width:100px;
+    height: 100px;
+    text-align:center;
+    border-right:1px dashed #eee;
+}
+
+.myorders_item_addr{
+    float:left;
+    width:290px;
+    text-align:left;
+    height: 100px;
+	padding-left:20px;
+	border-right:1px dashed #eee;
+	/*white-space:nowrap;*/
+	text-overflow:ellipsis;
+}
+
+.myorders_item_count{
+    float:left;
+    width:100px;
+    text-align:center;
+    height: 100px;
+	border-right:1px dashed #eee;
+}
+
+.myorders_item_linkman{
+    float:left;
+    width:100px;
+    height: 100px;
+    text-align:center;
+	border-right:1px dashed #eee;
+}
+
+.myorders_item_show{
+    float:left;
+    text-align:center;
+    width:150px;
+}
+
+.button{
+    width:180px;
+    height:30px;
+	padding-top:20px;
+    margin:0px auto;
+}
+.button li{
+    float:left;
+    height:25px;
+    width:25px;
+    text-align:center;
+    line-height:25px;
+}
+
+
+
+
+
+
+
+

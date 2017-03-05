@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>
+	<load href="__PUBLIC__/js/jquery-2.1.3.min.js"/>
+	<load href="__PUBLIC__/css/bootstrap.min.css" />
+	<load href="__PUBLIC__/js/bootstrap.min.js"/>
+</head>
+<body>
+<div style="width: 300px;">
+	<form role="form" action="{:U('Admin/Users/doedit')}" method="post">
+		<input type="hidden" name="id" value="{$info['id']}">
+		<div class="form-group">
+			<label for="username">登录账号</label>
+			<input type="text" class="form-control" id="username" name="username" placeholder="登录账号" value="{$info['username']}" disabled>
+		</div>
+		<div class="form-group">
+			<label for="realname">用户姓名</label>
+			<input type="text" class="form-control" id="realname" name="realname" placeholder="用户姓名" value="{$info['realname']}">
+		</div>
+		
+		<div class="form-group">
+			<label for="phone">电话</label>
+			<input type="text" class="form-control" id="phone" name="phone" placeholder="请输入电话号码" value="{$info['phone']}">
+		</div>
+
+		<div class="form-group">
+			<label for="email">邮箱</label>
+			<input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱地址" value="{$info['email']}">
+		</div>
+
+		<div class="form-group">
+			<label for="realname">出生年月：</label>
+			<select name="year" id="">
+
+				<for start="1900" end=":date('Y',time())+1" name="i">
+					<option value="{$i}" {$birth[0]==$i?selected:''}>{$i}</option>					
+				</for>
+			</select>年
+			<select name="month" id="">
+				<for start="1" end="13" name="i">
+					<option value="{$i}" {$birth[1]==$i?selected:''}>{$i}</option>					
+					
+				</for>
+			</select>月
+		</div>
+
+		<div class="form-group">
+			<span style="font-weight: 700; font-size: 16px;color: #333;">性别：</span>
+			<label for="man"><input type="radio" name="sex" id="man" value="1" {$info['sex']==1 ? 'checked':''}>男</label>
+			<label for="women"><input type="radio" name="sex" id="women" value="0" {$info['sex']==0 ? 'checked':''}>女</label>
+		</div>
+
+ 		<button type="submit" class="btn btn-default">提交</button>
+	</form>
+</div>
+</body>
+</html>

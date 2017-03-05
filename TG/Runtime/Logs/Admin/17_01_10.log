@@ -1,0 +1,48 @@
+[ 2017-01-10T09:58:47+08:00 ] ::1 /SecondProject/TG/index.php/admin/admin/index
+ERR: Class 'Admin\Controller\D' not found
+
+[ 2017-01-10T10:00:22+08:00 ] ::1 /SecondProject/TG/index.php/admin/admin/index
+ERR: Think\Model:pro_index方法不存在！
+
+[ 2017-01-10T10:02:13+08:00 ] ::1 /SecondProject/TG/index.php/admin/admin/index
+ERR: Think\Model:pro_index方法不存在！
+
+[ 2017-01-10T10:05:35+08:00 ] ::1 /SecondProject/TG/index.php/admin/admin/index
+ERR: Think\Model:pro_index方法不存在！
+
+[ 2017-01-10T10:07:49+08:00 ] ::1 /SecondProject/TG/index.php/admin/admins/index
+ERR: 模板不存在:./Apps/Admin/View/Admins/index.html
+
+[ 2017-01-10T16:06:33+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/edit/id/4.html
+ERR: 模板不存在:./Apps/Admin/View/Admins/edit.html
+
+[ 2017-01-10T19:34:06+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/doadd.html
+ERR: Call to a member function pro_add() on null
+
+[ 2017-01-10T19:35:22+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/doadd.html
+ERR: Call to a member function pro_add() on null
+
+[ 2017-01-10T19:43:19+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/del/id/6.html
+ERR: 1146:Table 'tg.tg_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tg_user`
+
+[ 2017-01-10T19:43:38+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/del/id/6.html
+ERR: 1146:Table 'tg.tg_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tg_user`
+
+[ 2017-01-10T20:23:55+08:00 ] ::1 /SecondProject/TG/index.php/Admin/Admins/doedit.html
+ERR: 1146:Table 'tg.tg_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `tg_user`
+
+[ 2017-01-10T23:54:57+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: Call to undefined function code()
+
+[ 2017-01-10T23:55:11+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: Call to undefined function code()
+
+[ 2017-01-10T23:56:23+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: Call to undefined function Admin\Controller\code()
+
+[ 2017-01-10T23:57:15+08:00 ] ::1 /SecondProject/TG/index.php/admin/index/login
+ERR: 模板不存在:./Apps/Admin/View/Index/code.html
+

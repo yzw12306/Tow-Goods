@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|我的收藏</title>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        <load href='__PUBLIC__/js/jquery.js' />
+		<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+        
+
+        <style>
+        .initprice{
+			margin-top:-10px;
+        }
+		.price{
+			margin-top:-35px;
+		}
+		
+		.state{
+			margin-top:0px;
+		}
+		.claims{
+			margin-top:-25px;
+		}
+		.unit{
+			width:240px;
+			float:left;
+			margin-left:20px;
+			margin-top:10px;
+		}
+		.myorders_item_header{
+		    width:238px;
+		    height:40px;
+		    background-color:#fafafc;
+		    line-height:40px;
+		    font-size:14px;
+		    border:1px solid #efefef;
+		}
+		.myorders_main{
+			width:900px;
+		}
+		.X{
+			float:right;
+			margin:5px;
+		}
+		.myorders_item_name{
+			border-right:1px dashed #fff;
+		}
+		.myorders_num{
+			margin-left:10px;
+		}
+		.pro_pic{
+			margin:10px;
+		}
+        </style>
+    </head>
+    <body>
+		{:W('Cate/menu')}
+        <hr style="background-color:#E5E5E5; height:1px; border:0px;">
+        <div class="content">
+            <p><a href="{:U('Home/Index/index')}" style="margin-right:5px;">首页</a>><span style="color:#959595;margin-left:5px;">收藏夹</span></p>
+		{:W('Cate/left_menu')}
+            <div class="right_main">
+                <div class="myorders_main">
+                    
+                    <div class="clear"></div>
+                    	
+                    		<foreach name='list' key='key' item='val'>
+								<div class="unit {$val['id']}_unit">
+							   		<div class="myorders_item_header">
+										
+										<div class="myorders_num">卖家：{$val['userid']}<span style="color:#545454"></span> <span class=''></span></div>
+									<div class='X'><a class='close' val="{$val['id']}" href='javascript:;'><img src="__PUBLIC__/Home_images/X.png" width='15px' title="取消收藏"></a></div>
+
+									</div>
+									<div class="myorders_item_info">
+									
+										<div class="myorders_item_img"><a href="{:U('Home/Details/index',['id'=>$val['id']])}"><img class='pro_pic' src="__PUBLIC__/Uploads/{$val['picname']}" width='80px' height='80px' alt=""></a></div>
+										<div class="myorders_item_name"><div style="width:110px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;">{$val['goods']}</div>
+										<div class='initprice' style='text-decoration:line-through;color:#777;'>￥{$val['initprice']}</div><div class='price'>￥{$val['price']}</div></div>
+
+									</div> 
+									
+                    			</div>
+                    			</foreach>
+					
+				</div>
+            </div>
+        
+        <div class="clear"></div>
+        <div class="clear"></div>
+        
+        </div>
+		{:W("Cate/foot")}
+    </body>
+
+    <script>
+
+
+    	$('.close').click(function(){
+    		// console.log($(this).attr('val'));
+    		var pid = $(this).attr('val');
+    		$.get("{:U('Home/Collection/status')}",{'id':pid},function(data){
+    			if(!data){
+    				$('.'+ pid +'_unit').fadeOut("slow");
+    			}
+    		});
+    	});
+
+    </script>
+</html>
+
+

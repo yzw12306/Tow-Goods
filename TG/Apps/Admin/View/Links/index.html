@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$title}</title>	
+	<load href="__PUBLIC__/js/jquery-2.1.3.min.js"/>
+	<load href="__PUBLIC__/js/bootstrap.min.js"/>
+	<load href="__PUBLIC__/css/bootstrap.min.css" />
+</head>
+<body>
+	<table class="table table-striped table-hover">
+		<tr>
+			<th>id</th>
+			<th>作者</th>
+			<th>链接名称</th>
+			<th>链接URL</th>
+			<th>添加时间</th>
+			<th>操作</th>
+		</tr>
+		
+		<foreach name="list" item="val" key="key">			
+			<tr>
+				<td>{$val['id']}</td>
+				<td>{$val['author']}</td>
+				<td>{$val['linkname']}</td>
+				<td>{$val['linksite']}</td>
+				<td>{$val['addtime']}</td>
+				<td><a href="{:U('Admin/Links/del',['id' => $val['id'] ])}" onclick="delcfm()">删除</a>|<a href="{:U('Admin/Links/edit',['id' => $val['id'] ])}">修改</a></td>
+			</tr>
+		</foreach>
+	</table>
+	<div>{$time}</div>
+	<div class="btnBox">{$show}</div>
+</body>
+<script>
+	$('.btnBox').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+	// 给当前页码高亮显示
+	$('.btnBox span').parent().addClass('active');
+
+	// 确认删除弹窗
+	function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+    
+
+</script>
+</html>

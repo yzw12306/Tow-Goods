@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二货网|修改闲置信息</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/home_index.css">
+	<script src="__PUBLIC__/js/jquery-2.1.3.min.js"></script>
+	<script src="__PUBLIC__/js/jquery.edslider.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+	<!-- 轮播图控制图标样式 -->
+	<load href="__PUBLIC__/css/bootstrap.min.css"/>
+	<load href="__PUBLIC__/js/bootstrap.min.js"/>
+	
+	<style>
+	.line{
+		width:100%;
+		height:2px;
+		background:#eee;
+	}
+	.main{
+		width:100%;
+		height:800px;
+	}
+	.container{
+		width:100%;
+		height:100%;
+	}
+	.r{
+		height:100%;
+	}
+	.g_line{
+		width:100%;
+		height:2px;
+	}
+	.col-md-6{
+	}
+
+	</style>
+</head>
+<body>
+	<!-- 头部开始 -->
+	{:W('Cate/menu')}
+	<!-- 头部结束 -->
+	<div class="clear"></div>
+
+	<div class='line'></div>
+
+	<div class='main'>
+		<div class='container'>
+			
+			<div class="row r">
+			  <div class="col-md-2 r"></div>
+			  <div class="col-md-6 r">
+			  	<br>
+				<div class='g_line'></div>
+				<br>
+				<form action = "{:U('Home/Person/doedit_pro')}" method = 'post' enctype="multipart/form-data" class="form-horizontal">
+				<input type="hidden" name='id' value='{$id}'>
+				<input type="hidden" name='oldpic' value='{$picname}'>
+				  <div class="form-group">
+				    <label for="inputgoods" class="col-sm-2 control-label"><span style='color:red;'>*</span>商品名称 : </label>
+				    <div class="col-sm-10">
+				      <input type="text" name='goods' value='{$goods}' class="form-control" id="inputgoods" placeholder="请输入商品名称..">
+				    </div>
+				  </div>
+
+
+
+				   <div class="form-group">
+				    <label for="inputcompany" class="col-sm-2 control-label"><span style='color:red;'>*</span>商品品牌 : </label>
+				    <div class="col-sm-10">
+				      <input type="text" name='company' value='{$company}' class="form-control" id="inputcompany" placeholder="请输入商品品牌..">
+				    </div>
+				  </div>
+
+				   <div class="form-group"> 
+				   	<label for="inputdescrip" class="col-sm-2 control-label"><span style='color:red;'>*</span>商品描述 : </label>
+				   	<div class="col-sm-10">
+				    <textarea class="form-control" id="inputdescrip" name='description' rows="3" placeholder="请输入商品描述..">{$description}</textarea> 
+				    </div>
+				  </div> 
+
+				  <div class="form-group">
+				    <label class="col-md-2 control-label" for="initprice"><span style='color:red;'>*</span>商品原价 :</label>
+				    <div class="input-group">
+				    	<div class="col-md-10">
+				      <input type="number" class="form-control" value='{$initprice}' min = '0' name='initprice'  id="initprice" placeholder="商品原价格..">
+				     </div>
+				    </div>
+				  </div>
+
+				   <div class="form-group">
+				    <label class="col-md-2 control-label" for="price"><span style='color:red;'>*</span>商品单价 :</label>
+				    <div class="input-group">
+				    	<div class="col-md-10">
+				      <input type="number" class="form-control" min = '0' value='{$price}' name='price' id="price" placeholder="商品原价格..">
+				     </div>
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label class="col-md-2 control-label" for="exampleInputFile"><span style='color:red;'>*</span>商品图片 : </label>
+				    <div class="col-md-4">
+				    <input type="file" name='pic' id="exampleInputFile">
+				    <p class="help-block">请上传商品清晰照片</p>
+				    </div>
+				    <div class="col-md-6">
+				   	<img src="__PUBLIC__/Uploads/{$picname}" width='100px' height='100px' alt="">
+				    </div>
+				  </div>
+				
+				<div class="form-group">
+				 <label class="col-md-2 control-label" for="seltype"><span style='color:red;'>*</span>类别 : </label>
+				 <div class="col-md-4">
+				 <select name='f_typeid' id='first' class="form-control">
+				  <option id='f_type' value='null'>-- 请选择 --</option>
+				</select>
+				</div>
+				<div class="col-md-3">
+				 <select  name='s_typeid' class="form-control" id='second' style='display:none;'>
+				  <option id='s_type'  value='null'>-- 请选择 --</option>
+				</select>
+				</div>
+				<div class="col-md-3">
+				 <select   name='t_typeid' class="form-control" id='third' style='display:none;'>
+				  <option id='t_type'  value='null'>-- 请选择 --</option>
+				</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				 <label class="col-md-2 control-label" for="selfineness"><span style='color:red;'>*</span>成色 : </label>
+				 <div class="col-md-4">
+				 <select class="form-control" name='fineness' id='selfineness'>
+				  <option value=''>-- 请选择 --</option>
+				  <option {$fineness == 1 ? 'selected': '' } value='1'>全新</option>
+				  <option {$fineness == 0 ? 'selected': '' } value='0'>非全新</option>
+				</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				 <label class="col-md-2 control-label" for="seltrade"><span style='color:red;'>*</span>交易方式 : </label>
+				 <div class="col-md-4">
+				 <select class="form-control" name='trade' id='seltrade'>
+				  <option value=''>-- 请选择 --</option>
+				  <option {$trade == 1 ? 'selected': '' } value='1'>可讲价</option>
+				  <option {$trade == 2 ? 'selected': '' } value='2'>不讲价</option>
+				</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				 <label class="col-md-2 control-label" for="seldeliver"><span style='color:red;'>*</span>送货方式 : </label>
+				 <div class="col-md-4">
+				 <select class="form-control" name='deliver' id='seldeliver'>
+				  <option value=''>-- 请选择 --</option>
+				  <option {$deliver == 1 ? 'selected': '' } value='1'>快递</option>
+				  <option {$deliver == 2 ? 'selected': '' } value='2'>当面交易</option>
+				</select>
+				</div>
+			</div>
+			<br>
+				  
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <button type="submit" class="btn btn-default">保存</button>
+				    </div>
+				  </div>
+				</form>
+			  </div>
+			  <div class="col-md-4 r"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="clear"></div>
+	<!-- 内容部分结束 -->
+
+
+	<!-- 底部文件加载开始 -->
+	{:W('Cate/foot')}
+
+</body>
+<script>
+
+	//向数据库请求根类别
+	$.post('{:U('Home/Person/type_ajax')}',{'pid':0},function(data){
+
+		//循环遍历出类别信息
+		for(i = data.length-1; i >= 0; i--){
+			$('#f_type').after('<option value="'+ data[i].id +'">'+ data[i].name +'</option>');
+		}
+	});
+
+	//改变第一级类别的时候，请求下一级的类别
+	$('#first').change(function(){
+		
+		$.post('{:U('Home/Person/type_ajax')}',{'pid':$(this).val()},function(data){
+
+			//有请求信息时，进行循环遍历出类别信息
+			if(data.length !== 0){
+				$('#second').css('display','');
+				$('#third').css('display','none');
+
+				$('#second').html('<option id="s_type"  value="null">-- 请选择 --</option>');
+				$('#third').html('<option id="t_type"  value="null">-- 请选择 --</option>');
+
+				for(i = data.length-1; i >= 0; i--){
+					$('#s_type').after('<option value="'+ data[i].id +'">'+ data[i].name +'</option>');
+				}
+			}else{
+				//无信息响应时，关闭下级类别的显示,并清空之前生成的option选项
+				$('#second').css('display','none').html('<option id="s_type"  value="null">-- 请选择 --</option>');
+				$('#third').css('display','none').html('<option id="t_type"  value="null">-- 请选择 --</option>');
+			}
+		})
+	});
+
+	//改变第二级类别的时候，请求下一级的类别
+	$('#second').change(function(){
+		$.post('{:U('Home/Person/type_ajax')}',{'pid':$(this).val()},function(data){
+
+			//有请求信息时，进行循环遍历出类别信息
+			if(data.length !== 0){
+				$('#third').css('display','');
+
+				$('#third').html('<option id="t_type"  value="null">-- 请选择 --</option>');
+
+				for(i = data.length-1; i >= 0; i--){
+					$('#t_type').after('<option value="'+ data[i].id +'">'+ data[i].name +'</option>');
+				}
+
+			}else{
+				
+				//无信息响应时，关闭下级类别的显示,并清空之前生成的option选项
+				$('#third').css('display','none').html('<option id="t_type"  value="null">-- 请选择 --</option>');
+
+			}
+		})
+	});
+</script>
+</html>

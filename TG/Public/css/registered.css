@@ -1,0 +1,216 @@
+
+/*===================公共样式设置===================*/
+
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td,img{
+    margin:0; padding:0;
+    }/*css重置*/
+body{ 
+    font:normal 12px/1.5 "微软雅黑",Verdana, Geneva, sans-serif; color:#000;
+ }
+ul{
+    list-style:none;
+}
+img{ 
+    border:0 none;
+}
+.clear{ 
+    clear:both;
+}
+a{
+    color:#333; text-decoration:none;
+}
+a:hover{ 
+    color:#00c3f5;
+}
+
+
+/*===================header 头部样式设置===================*/
+
+.header_login{
+    width:1080px;
+    margin:0 auto;
+    padding-top:30px;
+    height:60px;
+}
+
+.img_login{
+    float:left;
+    padding-left:120px;
+}
+
+.box{
+    width:100%;
+    background-color:#5a8d52;    
+}
+
+.main{
+    width:1080px;
+    height:450px;
+    margin:0 auto;
+    position:relative;
+    background:url(../Home_images/login_pht.jpg) no-repeat #5a8d52;
+    background-size:980px;
+}
+
+.login{
+    height:380px;
+    width:350px;
+    background-color:rgba(255,255,255,0.5);
+    top:50px;
+    right:85px;
+    position:absolute;
+}
+
+.login_bar{
+    margin-top:20px;
+    margin-left:22px;
+    font-size:18px;
+    height:20px;
+}
+
+.login_bar a{
+    display:block;
+    width:150px;
+    text-align:center;
+    float:left;
+}
+
+.login_box{
+    margin-top:20px;
+    margin-left:22px;
+}
+
+
+.input_css{
+    width:240px;
+    font-size:14px;
+    line-height:18px;
+    height:18px;
+    padding:11px 8px 11px 50px;
+    border:1px solid #ddd;
+}
+
+.input_name{
+    background: url(../Home_images/user_header.png) no-repeat #fff;
+    background-size:40px 40px;
+}
+
+.input_pass{
+    background: url(../Home_images/password.png) no-repeat #fff;
+    background-size:40px 40px;
+}
+
+.input_email{
+    background: url(../Home_images/password.png) no-repeat #fff;
+    background-size:40px 40px;
+}
+
+.validation{
+    width:300px;
+    margin-left:22px;
+    margin-top:20px;
+}
+
+.validation input{
+    float:left;
+    width:165px;
+    height:36px;
+}
+
+.validation span{
+    float:left;
+    width:100px;
+    height:40px;
+    display:block;
+    margin-left:30px;
+}
+
+.state{
+    width:300px;
+    margin-left:22px;
+    margin-top:20px;
+}
+
+.state span{
+    float:right;
+}
+
+.state span a{
+    color:#666;
+    padding-left:20px;
+    font-size:14px;
+}
+
+.state span a:hover{
+    color:#333;
+}
+
+#login_button{
+    width: 300px;
+    height: 40px;
+    margin-top:20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background-color:#32a5e7;
+    border:0px;
+}
+
+
+#login_button:hover{
+    background-color:#2b8cc5;
+}
+
+.login_footer{
+    width:1080px;
+    margin:0 auto;
+    font-size:14px;
+    margin-top:40px;
+}
+
+.footer_nav{
+    width:400px;
+}
+
+.footer_nav li{
+    float:left;
+    padding:0px 10px;
+    border-right:1px solid #666;
+}
+
+.connect{
+    float:left;
+    margin-left:30px;
+    width:300px;
+}
+
+.connect li{
+    float:left;
+    padding-left:15px;
+}
+
+.connect li a{
+    margin-top:-3px;
+    width:70px;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    color:#fff;    
+	border-radius:4px;
+    display:block;
+    background-color:#1fa7ea;
+}
+
+.connect li a:hover{
+    background-color:#4dcff6;
+}
+
+.info{
+    margin-left:10px;
+    margin-top:10px;
+    font-size:12px;
+    color:#999;
+}

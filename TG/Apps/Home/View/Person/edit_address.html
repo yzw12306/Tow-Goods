@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|编辑地址</title>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">        
+        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+
+    </head>
+    <body>
+        {:W('Cate/menu')}
+        <hr style="background-color:#E5E5E5; height:1px; border:0px;">
+        <div class="content">
+            <p><a href="{:U('Home/index/index')}" style="margin-right:5px;">首页</a>><span style="color:#959595;margin-left:5px;">地址管理</span></p>
+             <div class="left_main">
+              {:W('Cate/left_menu')}
+            </div>
+            <div class="right_main">
+                <div class="add_address">
+                    <span class="add_title">新增收货地址</span>
+                    <form action="{:U('Home/Person/doedit_address')}" method="post">
+                    <div class="address_main">
+                        <input type="hidden" name='id' value='{$id}'>
+                        <div class="uname">收货人姓名<span style="color:red">*</span>：<input type="text" value='{$linkman}' name="linkman"></div>
+                        <div class="phone">收货人电话<span style="color:red">*</span>：<input type="text" value='{$phone}'  name="phone"></div>
+                        <div class="clear"></div>                        
+                        <div class="address">收货人地址<span style="color:red">*</span>：<input type="text"  value='{$address}' name="address"></div>
+                        
+                        <div class="phone">收货人邮编：  <input type="text"  value='{$code}'  name="code"></div>
+                        <div class="clear"></div>
+                        <button class="add_button" type="submit">保存</button>
+                        <div class="clear"></div>
+                    </div>
+                    </form>
+                </div>
+               
+                
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        </div>
+            {:W('Cate/foot')}
+    </body>
+    <script>
+        function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+    </script>
+</html>
+
+

@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|我的闲置</title>
+        <script src="__PUBLIC__/js/jquery-2.1.3.min.js"></script>
+        <load href="__PUBLIC__/css/bootstrap.min.css"/>
+        <load href="__PUBLIC__/js/bootstrap.min.js"/>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+
+
+        <style>
+        .head_nav{
+            width:700px;
+            height:25px;
+            background:#efefef;
+            line-height:25px;
+            padding-left:10px;
+            margin-left:20px;
+        }
+        .unit{
+            width:750px;
+            height:200px;
+            background:;
+        }
+        .my_img{
+            margin-left:20px;
+            margin-top:20px;
+        }
+        .my_price{
+            margin-left:160px;
+            margin-top:-60px;
+        }
+        .my_click{
+            margin-left:160px;
+            margin-top:20px;
+        }
+        .my_goods{
+            margin-left:160px;
+            margin-top:-100px;
+        }
+        .edit{
+            margin-top:10px;
+            margin-left:620px;
+        }
+        .state{
+            margin-top:-10px;
+            margin-left:620px;
+        }
+        </style>
+    </head>
+    <body>
+        {:W('Cate/menu')}
+        <hr style="background-color:#E5E5E5; height:1px; border:0px;">
+        <div class="content">
+            <p><a href="{:U('Home/Index/index')}" style="margin-right:5px;">首页</a>><span style="color:#959595;margin-left:5px;">地址管理</span></p>
+             <div class="left_main">
+              {:W('Cate/left_menu')}
+            </div>
+            <div class="right_main">
+                    
+                <if condition="$list eq 'null'" >
+                    <div class='unit'>
+                    <div class='head_nav'>
+                        
+                    </div>
+                    <div style='margin:20px;color:#779;'><h5>您没有已发布的闲置物品!</h5><br><a href="{:U('Home/Person/products')}" class="btn btn-default ">点击发布闲置</a></div>                    
+                </div>
+                </if>
+                <foreach name='list' item='val'>
+                <div class='unit'>
+                    <div class='head_nav'>
+                        <span> 发布时间 : {$val['addtime']} </span>
+                        <span style='float:right;margin-right:10px;'> 商品状态 : <span class='{$val['id']}_info'>{$val['status']}</span> </span>
+                    </div>
+                    <div class='my_img'><a href="{:U('Home/Details/index',['id'=>$val['id']])}"><img class='pro_pic' src="__PUBLIC__/Uploads/{$val['picname']}" width='120px' height='120px' alt=""></a></div>
+                    
+                    <div class='my_price' style="font:'20px';font-weight:bold;">￥<span style='color:red;font:17px bold'>{$val['price']}</span></div>
+                    <div class='my_click' style='color:green'>浏览 : {$val['clicknum']} &nbsp;&nbsp;留言 : {$val['mesnum']} </div>
+                    <div class='my_goods'> {$val['company']}-{$val['goods']} </div>
+
+                   <!--  <if condition="strtoupper($val['status']) neq '失效'">
+                    <div class='state'><a href="{:U('Home/Person/cancel_pro',['id'=>$val['id'],'status'=>$val['status']])}" role='button' class="btn btn-default">{$val['status'] == '在售'? '下架宝贝':'上架宝贝'}</a></div>
+                    </if> -->
+
+
+                     <if condition="strtoupper($val['status']) neq '失效'">
+                    <div class='state'><button val="{$val['id']}" class="btn_state btn btn-default">{$val['status'] == '在售'? '下架宝贝':'上架宝贝'}</button></div>
+                    </if>
+
+                    <div class='edit'><a  role='button' href="{:U('Home/Person/edit_pro',['id'=>$val['id']])}" class="btn btn-default ">编辑宝贝</a></div>
+                    
+                </div>
+                </foreach>
+                    <div class="btnBox">{$show}</div>
+                    </div>
+                    <div class="clear"></div>
+                       
+                   
+                </div>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        </div>
+            {:W('Cate/foot')}
+    </body>
+    <script>
+         //给页码样式
+        $('.btnBox').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+        // 给当前页码高亮显示
+        $('.btnBox span').parent().addClass('active');
+
+
+        function delcfm() {
+
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+
+        $('.btn_state').click(function(){
+            $th = $(this);
+            $info = $('.'+$(this).attr('val')+'_info');
+            $.post("{:U('Home/Person/state_ajax')}",{'status':$(this).attr('val')},function(data){
+                if(data == 1){
+                    $th.html('下架宝贝');
+                    $info.html('在售');
+                }else if(data == 2){
+                    $th.html('上架宝贝');
+                    $info.html('下架');
+                }
+            });
+        });
+    </script>
+</html>
+
+

@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|订单管理</title>
+        <load href='__PUBLIC__/js/jquery.js' />
+        <!-- <load href="__PUBLIC__/js/bootstrap.min.js">	
+		<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">	 -->
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        
+        
+        <style>
+        .initprice{
+			margin-top:-10px;
+        }
+		.price{
+			margin-top:-35px;
+		}
+		
+		.state{
+			margin-top:0px;
+		}
+		.claims{
+			margin-top:-25px;
+		}
+		.unit{
+			width:240px;
+			float:left;
+			margin-left:20px;
+			margin-top:10px;
+		}
+		#myclaim{
+			width:240px;
+			margin-left:20px;
+			margin-top:10px;
+		}
+		.myorders_item_header{
+		    width:238px;
+		    height:40px;
+		    background-color:#fafafc;
+		    line-height:40px;
+		    font-size:14px;
+		    border:1px solid #efefef;
+		}
+		.myorders_main{
+			width:900px;
+		}		
+		.myorders_item_name{
+			border-right:1px dashed #fff;
+		}
+		.myorders_num{
+			margin-left:10px;
+		}
+		.pro_pic{
+			margin:10px;
+		}
+		
+        </style>
+    </head>
+    <body>
+		{:W('Cate/menu')}
+        <hr style="background-color:#E5E5E5; height:1px; border:0px;">
+        <div class="content">
+            <p><a href="{:U('Home/Index/index')}" style="margin-right:5px;">首页</a>><span style="color:#959595;margin-left:5px;">收藏夹</span></p>
+		{:W('Cate/left_menu')}
+            <div class="right_main">
+                <div class="myorders_main">
+                    
+                    <!-- <div class="clear"></div> -->
+                    	
+            		<h4>举报商品如下：</h4>
+					<div id="myclaim">
+				   		<div class="myorders_item_header">								
+							<div class="myorders_num">卖家：{$list['username']}<span style="color:#545454"></span> <span class=''></span>
+							</div>									
+						</div>
+						<div class="myorders_item_info">									
+							<div class="myorders_item_img"><a href="{:U('Home/Details/index', ['id' => $list['id']])}"><img class='pro_pic' src="__PUBLIC__/Uploads/{$list['picname']}" width='80px' height='80px' alt=""></a></div>
+							<div class="myorders_item_name">
+								<a href="{:U('Home/Details/index', ['id' => $list['id']])}">{$list['goods']}</a>
+								<div class='initprice' style='text-decoration:line-through;color:#777;'>￥{$list['initprice']}
+								</div>
+								<div class='price'>￥{$list['price']}</div>
+							</div>
+						</div> 									
+        			
+						<br/>
+	        			<form action="{:U('Home/Person/doclaim')}" method="post" enctype="multipart/form-data">
+							<table border="1px" width="350px" height="300px">
+								<tr>
+									<td>举报原因:</td>
+									<td>
+										<select name="reasonid" id="">
+											<foreach name="reasonlist" item="val" key="key">
+												<option value="{$val['id']}">{$val['reason']}</option>
+											</foreach>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>上传证据:</td>
+									<td>
+										<input type="file" name="evidence" style="border:0px;width:150px; height:30px;">
+									</td>
+								</tr>
+								<tr>
+									<td>原因详细描述:</td>
+									<td>
+										<textarea name="description" id="" cols="30" rows="10"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" align="center">
+										<input type="submit" class="btn btn-default">
+										<input type="reset" class="btn btn-default">
+									</td>
+								</tr>
+							</table>
+
+	        			</form>
+					</div>
+				</div>
+            </div>
+        
+        <div class="clear"></div>
+        <div class="clear"></div>
+        
+        </div>
+		{:W("Cate/foot")}
+    </body>
+
+    <script>
+
+
+    	$('.close').click(function(){
+    		// console.log($(this).attr('val'));
+    		var pid = $(this).attr('val');
+    		$.get("{:U('Home/Collection/status')}",{'id':pid},function(data){
+    			if(!data){
+    				$('.'+ pid +'_unit').fadeOut("slow");
+    			}
+    		});
+    	});
+
+    </script>
+</html>
+
+

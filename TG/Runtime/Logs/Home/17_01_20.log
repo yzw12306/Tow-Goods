@@ -1,0 +1,116 @@
+[ 2017-01-20T09:37:21+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index
+ERR: 1052:Column 'addtime' in order clause is ambiguous
+ [ SQL语句 ] : SELECT * FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid  WHERE (  1=1 ) ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T09:41:42+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index
+ERR: 1054:Unknown column '__PRODUCTS__.addtime' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid  WHERE (  1=1 ) ORDER BY __PRODUCTS__.addtime desc LIMIT 0,25  
+
+[ 2017-01-20T09:45:05+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-01-20T10:24:18+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ' at line 1
+ [ SQL语句 ] : SELECT tg_products.*,tg_collection.id as productid FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid INNER JOIN ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T10:28:14+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ' at line 1
+ [ SQL语句 ] : SELECT tg_products.*,tg_collection.id as productid FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid INNER JOIN ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T10:28:17+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ' at line 1
+ [ SQL语句 ] : SELECT tg_products.*,tg_collection.id as productid FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid INNER JOIN ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T10:28:19+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ' at line 1
+ [ SQL语句 ] : SELECT tg_products.*,tg_collection.id as productid FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid INNER JOIN ON tg_collection.userid = 13  WHERE `typeid` IN ('311','312','313','314','315') ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T10:29:14+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: 1054:Unknown column 'sessionid' in 'where clause'
+ [ SQL语句 ] : SELECT tg_products.*,tg_collection.id as productid,tg_collection.userid as sessionid FROM `tg_products` LEFT JOIN tg_collection ON tg_products.id = tg_collection.productid  WHERE `typeid` IN ('311','312','313','314','315') AND `sessionid` = 13 ORDER BY addtime desc LIMIT 0,25  
+
+[ 2017-01-20T11:15:32+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index/id/51.html
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-01-20T13:58:24+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index.html
+ERR: syntax error, unexpected '' : '' (T_CONSTANT_ENCAPSED_STRING)
+
+[ 2017-01-20T13:58:50+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index.html
+ERR: syntax error, unexpected '' : '' (T_CONSTANT_ENCAPSED_STRING)
+
+[ 2017-01-20T14:13:24+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=17
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 17 AND `userid` = 13 LIMIT 1   [ RunTime:0.1510s ]
+SQL: INSERT INTO `tg_collection` (`productid`,`userid`,`addtime`) VALUES ('17','13','1484892803') [ RunTime:0.2830s ]
+
+[ 2017-01-20T14:13:26+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=17
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 17 AND `userid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `tg_collection` WHERE `productid` = 17 AND `userid` = 13 [ RunTime:0.0820s ]
+
+[ 2017-01-20T14:13:29+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=17
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 17 AND `userid` = 13 LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `tg_collection` (`productid`,`userid`,`addtime`) VALUES ('17','13','1484892809') [ RunTime:0.0590s ]
+
+[ 2017-01-20T14:14:55+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 15 AND `userid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `tg_collection` (`productid`,`userid`,`addtime`) VALUES ('15','13','1484892895') [ RunTime:0.0480s ]
+
+[ 2017-01-20T14:17:12+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 15 AND `userid` = 13 LIMIT 1   [ RunTime:0.0080s ]
+SQL: DELETE FROM `tg_collection` WHERE `productid` = 15 AND `userid` = 13 [ RunTime:0.0700s ]
+
+[ 2017-01-20T14:17:48+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=14
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 14 AND `userid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `tg_collection` (`productid`,`userid`,`addtime`) VALUES ('14','13','1484893068') [ RunTime:0.0640s ]
+
+[ 2017-01-20T14:18:11+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=14
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 14 AND `userid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `tg_collection` WHERE `productid` = 14 AND `userid` = 13 [ RunTime:0.0870s ]
+
+[ 2017-01-20T15:57:27+08:00 ] ::1 /SecondProject/TG/index.php/Home/Products/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `productid` FROM tg.tg_collection WHERE ( userid =  ) 
+
+[ 2017-01-20T20:16:38+08:00 ] ::1 /SecondProject/TG/index.php/Home/Collection/status.html?id=28
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\xampp\htdocs\SecondProject\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tg_collection` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_collection` WHERE `productid` = 28 AND `userid` = 13 LIMIT 1   [ RunTime:0.1550s ]
+SQL: INSERT INTO `tg_collection` (`productid`,`userid`,`addtime`) VALUES ('28','13','1484914597') [ RunTime:0.6360s ]
+

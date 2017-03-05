@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品列表</title>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.masonry.js"></script>
+	<!-- <script type="text/javascript" src="__PUBLIC__/js/jquery.infinitescroll.js"></script>	 -->
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>	
+
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="__PUBLIC__/css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+	<link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+	<script type="text/javascript" src="__PUBLIC__/js/shop.js"></script>
+
+</head>
+<body>
+
+	{:W('Cate/menu')}
+
+<div class="content">
+	<!-- 当前位置 -->
+	<div class="crumbs-container">
+	    <div class="crumbs">
+	        <em class="crumbs-title">个人闲置：</em>
+				<a href="{:U('Home/Products/index')}" class="crumbs-nav">全部</a>
+				 <foreach name="typepid" item="val" key="key">
+				 	<span class="pipe-gt">&gt;</span>
+					<a href="{:U('Home/Products/index', ['id' => $val['id']])}" title=""><span class="cur-category">{$val['name']}</span></a>
+			    </foreach>
+				<!-- <span class="pipe-gt">&gt;</span>
+				<span class="cur-category">手机</span> -->
+		</div>                        	
+	</div>
+	<!-- 分类筛选导航栏 -->
+	<if condition="$type != null">	
+		<div class="category-filter-container sh-roundbox">
+		    <div class="category-filter-wrapper">
+		        <div id="J_CategoryFilters" class="category-filters">
+					<div class="category-list J_HiddenArea">
+					    <ul class="J_HiddenAreaContent clearfix">
+					    <foreach name="type" item="val" key="key">
+							<li>
+								<a href="{:U('Home/Products/index', ['id' => $val['id']])}" title="">{$val['name']}({$val['sum']})</a>
+							</li>
+					    </foreach>
+					    </ul>
+					</div>
+		        </div>
+		    </div>
+		    <div class="clear"></div>
+		</div>
+	</if>
+	<!-- 排序搜索 -->	
+		<div class="search_sort">
+			<form action="{:U('Home/Products/index')}" method="get">
+				<input type="hidden" name="id" value="{$id}">
+				<div class="sort">
+	                <a href="{:U('Home/Products/Index', ['clicknum' => 'desc','id' => $id, 'price1' => $price1, 'price2' => $price2, 'search' => $search])}" role="button">人气排序<em class="fs-up"><i class="arrow"></i></em></a>	            
+	                <a href="{:U('Home/Products/Index', ['price' => 'desc', 'id' => $id,'price1' => $price1, 'price2' => $price2, 'search' => $search])}" role="button"><span class="fs_tit">价格从高到低</span><em class="fs-up"><i class="arrow-top"></i><i class="arrow-bottom"></i></em></a>
+	                <a href="{:U('Home/Products/Index', ['price' => 'asc', 'id' => $id, 'price1' => $price1, 'price2' => $price2, 'search' => $search])}" role="button"><span class="fs_tit">价格从低到高</span><em class="fs-up"><i class="arrow-top"></i><i class="arrow-bottom"></i></em></a>
+	                <span style="float:left;">&nbsp;&nbsp;&nbsp;</span>
+					<input type="text" size="5" name="price1" value="{$price1}" placeholder="¥">
+					<span style="float:left;line-height: 30px">&nbsp;-&nbsp;</span>
+					<input type="text"  size="5" name="price2" value="{$price2}" placeholder="¥">
+					<input type="submit" value="确定">			
+				</div>
+				<!-- 商品搜索 -->
+				<div class="search">
+					<div class="col-md-9 col-md-offset-2">
+						<div class="input-group">						
+							<input type="text" class="form-control" name="search" value="{$search}" placeholder="请输入你想要搜索的内容">
+							<span class="input-group-btn">
+								<input type="submit" class="btn btn-default" value="搜索">
+								<!-- <button class="btn btn-default" type="button">Go!</button> -->
+							</span>						
+						</div><!-- /input-group -->					
+					</div><!-- /.col-lg-6 -->
+				</div>
+			</form>
+		</div>	
+	<!-- 排序搜索结束 -->
+
+
+	<!-- 商品列表 -->
+	<div class="demo clearfix">
+		
+		<div class="item_list infinite_scroll">
+		
+			<foreach name="list" item="val" key="key">
+				<!-- 商品开始 -->
+				<div class="item masonry_brick">
+					<div class="item_t">
+						<div class="item_pic">
+							<a href="{:U('Home/Details/Index', ['id' => $val['id']])}"><img width="210" alt="抱歉！图片加载失败！" src="__PUBLIC__/Uploads/{$val['picname']}" /></a>
+							<strong class="price" style="color:#f40;font-size:18px">￥{$val['price']}</strong>
+							
+						</div>
+						<div class="title"><a href="{:U('Home/Details/Index', ['id' => $val['id']])}"><span style="font-weight:bold">{$val['goods']}</span>&nbsp;&nbsp;&nbsp;<span>{$val['description']}</span></a></div>
+					</div>
+					<div class="item_b clearfix">
+						<div class="items_likes fl">
+							<a {$val['collected'] ? 'class="like_btn_clicked"' : 'class="like_btn"'} href="javascript:void(0);"onclick="collected(this, {$val['id']});"></a>
+							<em class="bold"><img src="__PUBLIC__/Home_images/pointer.png">&nbsp;{$val['clicknum']}</em>
+						</div>
+						<div class="items_comment fr"><span>留言</span><em class="bold">({$val['messagenum']})</em></div>
+					</div>
+				</div>
+				<!--商品结束-->			
+			</foreach>
+		</div>
+			
+				
+						
+		<div id="more"><a href="page/2.html"></a></div>
+		<!-- 页码开始 -->
+		<center>
+				<div id="btnBox">
+		 			{$show}
+		 		</div>	
+	 	</center>
+		<!-- 页码结束 -->
+		
+	</div>
+</div>
+
+	<!-- 底部文件加载开始 -->
+	{:W("Cate/foot")}
+
+	<div style="display:none;" id="gotopbtn" class="to_top"><a title="返回顶部" href="javascript:void(0);"></a></div>
+
+</body>
+<script type="text/javascript">
+
+	// 将数字按钮进行包裹
+	$('#btnBox').children().children().unwrap().wrap('<li></li>').parent().wrapAll('<ul class="pagination"></ul>');
+	// 给当前页码高亮显示
+	$('#btnBox span').parent().addClass('active');	
+
+	//收藏商品调用ajax函数发送get请求
+	function collected(e, id)
+	{
+
+		$.ajax({
+			// 请求的地址
+	        'url' : "{:U('Home/Collection/status')}",
+
+	        // 是否异步
+	        'async' : true,
+
+	        'data' :{
+
+	        		'id': id
+
+			    },
+
+	        // 数据类型
+	        'dataType' : 'json',
+
+	        // 请求方式
+	        'type' : 'GET',
+
+	        // 成功回调
+	        'success' : function(data){
+
+	        	if(data){
+
+	        		$(e).removeClass();
+	        		$(e).addClass("like_btn_clicked");
+
+	        	}else{
+
+	        		$(e).removeClass();
+	        		$(e).addClass("like_btn");
+
+	        	}
+
+	        }
+		});
+
+	}
+
+</script>
+</html>

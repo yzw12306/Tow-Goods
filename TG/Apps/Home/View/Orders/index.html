@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>订单</title>
+        <link type="text/css" href="__PUBLIC__/css/orderlist.css" rel="stylesheet">
+        <link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <style>
+        li{
+            list-style:none;
+        }
+        .unit{
+            margin-top:10px;
+        }
+        </style>
+    </head>
+    <body>
+        {:W('Cate/menu')}
+        <div style="background-color:#f5f5f5;height:100%;width:100%;">
+            <div class="shopping_main">
+            
+                <div class="info">
+                    <h2 style="padding:15px 50px;font-size:18px;">收货人信息</h2>
+                    <hr style="width:93%;margin:0 auto;background-color:#E5E5E5; height:1px; border:0px;">
+                    <div class="address">
+                    <form action="{:U('Home/Orders/add_order')}" method="post">
+                       
+                        <!-- 遍历开始 -->
+                        <foreach name='list' key='key' item='val'>
+                        <div class='unit'>
+                       <label for="{$key}">
+                                    <li class="order-address-checkbox ">
+                                        <div class="order-address-checkbox-top">
+                                            <div class="order-address-checkbox-name" title="{$val['linkman']}">{$val['linkman']}</div>
+                                            <div class="order-address-checkbox-phone">{$val['phone']}</div>
+                                        </div>
+                                        <div class="order-address-checkbox-content">
+                                            {$val['address']}
+                                        </div>
+                                        <div style="margin-top:35px;">
+                                            <input type="radio" name="addr" id="{$key}" value="{$val['id']}">
+                                            
+                                        </div>
+                                    </li>
+                                    </label>
+                                    </div>
+                                </foreach>
+                            <!-- 遍历结束 -->
+                          
+                        </ul>
+                        <div class="clear"></div>
+                        <button class="new" formaction="{:U('Home/Person/address')}" formtarget="   
+_blank">新增</button>
+                        
+                        
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="shopping_item">
+                                      
+                    <div class="order_confirm">确认订单信息</div>
+                    <div class="order_list_header">
+                        <div class="pr_name">商品信息</div>
+                        <div class="pr_price">单价</div>
+                        <div class="pr_num">成色</div>
+                        <div class="pr_count">交易方式</div>
+                    </div>
+                    
+                    <div class="clear"></div>
+                  <!-- 遍历开始 -->
+                            <div class="pr_item">
+                                <div class="pr_info">
+                                    <div class="pr_img"><a href="{:U('Home/details/index',['id'=>$data['id']])}"><img src="__PUBLIC__/Uploads/{$data['picname']}" width="80"></a></div>
+                                    <span style='margin-left:90px'><a href="{:U('Home/details/index',['id'=>$data['id']])}">{$data['goods']}</a></span>
+                                </div>
+                                <div class="pr_pri">
+                                {$data['price']}
+                                </div>
+                                <div class="pr_number">
+                                {$data['fineness']}
+                                </div>
+                                <div style='color:#000' class="count_pri">
+                                {$data['deliver']}
+                                </div>
+                            </div>
+                        
+                        <div class="count_all">
+                                  <span style="margin-right:70px;width:100px;">总金额：<span style="font-size:22px;color:red;font-weight:700;">{$data['price']}</span>
+                              </div>
+                   
+                        <input type="hidden" name='saleid' value="{$data['userid']}">
+                        <input type="hidden" name='productid' value="{$data['id']}">
+                        <input type="hidden" name='productname' value="{$data['goods']}">
+                        <input type="hidden" name='total' value="{$data['price']}">
+
+                        <div class="order_sub"><button type="submit">提交订单</button></div>
+
+                        
+                    
+                    </form>
+                <div class="clear"></div>
+                </div>
+                
+            </div>
+        </div>
+            <div class="clear"></div>
+        </div>
+        
+        {:U('Cate/foot')}        
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>二货网|地址管理</title>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/member_index.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/header_nav_footer.css">
+        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/Home_images/icon.png">
+
+    </head>
+    <body>
+        {:W('Cate/menu')}
+        <hr style="background-color:#E5E5E5; height:1px; border:0px;">
+        <div class="content">
+            <p><a href="{:U('Home/Index/index')}" style="margin-right:5px;">首页</a>><span style="color:#959595;margin-left:5px;">地址管理</span></p>
+             <div class="left_main">
+              {:W('Cate/left_menu')}
+            </div>
+            <div class="right_main">
+                <div class="add_address">
+                    <span class="add_title">新增收货地址</span>
+                    <form action="{:U('Home/Person/add_address')}" method="post">
+                    <div class="address_main">
+                        <div class="uname">收货人姓名<span style="color:red">*</span>：<input type="text" name="linkman"></div>
+                        <div class="phone">收货人电话<span style="color:red">*</span>：<input type="text" name="phone"></div>
+                        <div class="clear"></div>                        
+                        <div class="address">收货人地址<span style="color:red">*</span>：<input type="text" name="address"></div>
+                        
+                        <div class="phone">收货人邮编：  <input type="text" name="code"></div>
+                        <div class="clear"></div>
+                        <button class="add_button" type="submit">保存</button>
+                        <div class="clear"></div>
+                    </div>
+                    </form>
+                </div>
+               
+                <div class="show_address">
+                    <span class="have_address">已有地址</span>
+                    <div class="address_show">
+                        <span class="have_name" style="text-align:center;padding:0;">收货人姓名</span>
+                        <span class="have_addr" style="text-align:center">收货人地址</span>
+                        <span class="have_phone">收货人电话</span>
+                        <span class="do_address">操作</span>
+                    </div>
+                    <div class="clear"></div>
+                        <foreach name='data' item='val'>
+                             <div class="user_addr">
+                                <span class="have_name" style="text-align:center">{$val['linkman']}</span>
+                                <span class="have_addr" style="text-align:center">{$val['address']}</span>
+                                <span class="have_phone" style="text-align:center">{$val['phone']}</span>
+                                <span class="do_address" style="text-align:center"><a href="{:U('Home/Person/edit_address',['id'=>$val['id']])}">修改</a> | <a href="{:U('Home/Person/del_address',['id'=>$val['id']])}"  onclick="delcfm()">删除</a></span>
+                                <div class="clear"></div>
+                            </div>
+                            </foreach>
+                   
+                </div>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        </div>
+            {:W('Cate/foot')}
+    </body>
+    <script>
+        function delcfm() {
+        if (!confirm("确认要删除？")) {
+            window.event.returnValue = false;
+        }
+    }
+    </script>
+</html>
+
+

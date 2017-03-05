@@ -1,0 +1,227 @@
+/*页面头部、导航、底部样式*/
+
+
+/*===================公共样式设置===================*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td,img{
+    margin:0; padding:0;
+    }/*css重置*/
+body{ 
+    font:normal 12px/1.5 "微软雅黑",Verdana, Geneva, sans-serif; color:#000;
+ }
+ul{
+    list-style:none;
+}
+img{ 
+    border:0 none;
+}
+.clear{ 
+    clear:both;
+}
+a{
+    color:#333; text-decoration:none;
+}
+a:hover{ 
+    color: #88c63c;
+    text-decoration: none;
+}
+
+/*===================公共样式结束===================*/
+
+
+
+/*===================头部样式设置===================*/
+.header{
+    width:100%;
+    height:40px;
+    border-bottom: 1px solid #cc0033;
+}
+.head_bar{
+    width:1080px;
+    height:40px;
+    margin:0px auto;
+    line-height:40px;
+    text-align:center;
+}
+.head_bar ul li{
+    float:right;
+    width:80px;
+}
+.head_bar ul li a{
+    color:#666666;
+}
+.head_bar ul li a:hover{
+    color:#88c63c;
+    text-decoration:none;    
+}
+
+
+
+
+/*===================导航栏样式设置======================*/
+
+
+.nav{
+    width:1080px;
+    height:70px;
+    margin:0px auto;
+}
+.img{
+    margin-top: -15px;
+    float:left;
+    display:block;
+    margin-right:88px;    
+    margin-left:110px;
+}
+
+.nav_bar{
+    height:70px;
+    width:1000px;
+}
+
+.nav_item,.nav_menu{
+	float: left;
+	padding-top:25px;
+
+}
+.nav_item ul li{
+    float:left;
+    width:100px;
+    font:14px/1.5 "宋体";
+    text-align:center;
+}
+
+.nav_menu ul li{
+    float:left;
+    width:100px;
+    font:14px/1.5 "宋体";
+    text-align:center;
+    position: relative;
+}
+
+
+.nav_menu ul li ul{
+    display: none;
+    z-index: 100;
+}
+
+.nav_menu ul li:hover ul{
+	display: block;
+	position: absolute;
+	top: 20px;
+}
+
+.nav_menu ul li ul li{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dotted #ccc;
+	background-color: #cc0033;
+}
+
+.nav_menu ul li ul li:hover{
+	background-color: #ff0040;
+}
+
+.nav_menu ul li ul li a{
+	color: #fff;
+	height: 30px;
+	width: 100px;
+	display: block;
+}
+
+
+/*===============================网页底部样式=================================*/
+
+#footer {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+}
+
+#footer .footer-inner {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#footer .footer-left {
+    float: left;
+    max-width: 858px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-l-top {
+    padding-top: 38px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #696969;
+}
+
+.footer-l-mid {
+    min-height: 100px;
+    border-bottom: 1px solid #eee;
+}
+
+.footer-l-mid dt {
+    color: #f5f5f5;
+}
+
+.footer-l-mid dd {
+    margin: 8px 0 0;
+}
+
+.footer-l-mid dd a {
+    display: inline-block;
+    margin: 8px 42px 8px 0;
+    line-height: 12px;
+    color: #aaa;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.footer-l-btm {
+    margin-top: 30px;
+}
+
+.footer-l-btm p {
+    margin-bottom: 14px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+#footer .footer-right {
+    float: right;
+    max-width: 314px;
+}
+
+.footer-right {
+    width: 136px;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.footer-right img{
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
